@@ -1,0 +1,15 @@
+# Return double of n
+def addition(n):
+    return n + n
+
+# We double all numbers using map()
+numbers = (1, 2, 3, 4)
+results = map(addition, numbers)
+
+# Does not Prints the value
+print(results)
+print(type(results))
+
+# For Printing value
+for result in results:
+    print(result, end = " ")
