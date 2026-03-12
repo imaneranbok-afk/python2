@@ -19,7 +19,6 @@ while True:
     print("1. Ajouter un contact")
     print("2. Afficher tous les contacts")
     print("3. Quitter le programme")
-    
     choix = input("Votre choix (1-3) : ")
     
     if choix == "1":
