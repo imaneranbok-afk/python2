@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-# -------------------------
+
 # Partie 1 : Classe abstraite Boisson
-# -------------------------
 
 class Boisson(ABC):
 
@@ -20,10 +19,8 @@ class Boisson(ABC):
         return BoissonCombinee(self, other)
 
 
-# -------------------------
-# Partie 2 : Boissons concretes
-# -------------------------
 
+# Partie 2 : Boissons concretes
 class Cafe(Boisson):
 
     def cout(self):
@@ -42,9 +39,8 @@ class The(Boisson):
         return "The"
 
 
-# -------------------------
+
 # Partie 3 : 
-# -------------------------
 
 class Ingredient(Boisson):
 
@@ -80,9 +76,9 @@ class Caramel(Ingredient):
         return self.boisson.description() + ", Caramel"
 
 
-# -------------------------
+
 # Partie 4 : Combinaison de boissons
-# -------------------------
+
 
 class BoissonCombinee(Boisson):
 
@@ -97,9 +93,9 @@ class BoissonCombinee(Boisson):
         return self.b1.description() + " + " + self.b2.description()
 
 
-# -------------------------
+
 # Partie 5 : Client (dataclass)
-# -------------------------
+
 
 @dataclass
 class Client:
@@ -108,9 +104,9 @@ class Client:
     points: int = 0
 
 
-# -------------------------
+
 # Partie 7 : Commandes
-# -------------------------
+
 
 class Commande:
 
@@ -137,9 +133,9 @@ class Commande:
         print("Prix total :", self.prix_total(), "MAD")
 
 
-# -------------------------
+
 # Types de commandes
-# -------------------------
+
 
 class CommandeSurPlace(Commande):
 
@@ -155,9 +151,9 @@ class CommandeEmporter(Commande):
         super().afficher()
 
 
-# -------------------------
+
 # Programme fidélité
-# -------------------------
+
 
 class Fidelite:
 
@@ -175,9 +171,9 @@ class CommandeFidele(Commande, Fidelite):
         print("Commande valide")
 
 
-# -------------------------
+
 # Test Systeme :
-# -------------------------
+
 
 if __name__ == "__main__":
 
